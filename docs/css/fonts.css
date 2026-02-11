@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Maple Mono NF";
+    src: url('../fonts/Maple-Mono-NF-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "STKAITI";
+    src: url('../fonts/STKAITI.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+:root {
+    /* 中英文字体 */
+    --md-text-font: "STKAITI";
+    /* 代码字体 */
+    --md-code-font: "Maple Mono NF";
+}
+
+.md-typeset {
+    font-size: 20px;
+    font-weight: 500;
+}

@@ -2,44 +2,66 @@
 icon: lucide/rocket
 ---
 
-# Get started
+# 快速开始
 
 For full documentation visit [zensical.org](https://zensical.org/docs/).
 
-## Commands
+## 命令行 
 
-* [`zensical new`][new] - Create a new project
-* [`zensical serve`][serve] - Start local web server
-* [`zensical build`][build] - Build your site
+- [`zensical new`][new] - Create a new project
+- [`zensical serve`][serve] - Start local web server
+- [`zensical build`][build] - Build your site
 
   [new]: https://zensical.org/docs/usage/new/
   [serve]: https://zensical.org/docs/usage/preview/
   [build]: https://zensical.org/docs/usage/build/
 
-## Examples
+## 示例
 
-### Admonitions
+### 提示框
 
 > Go to [documentation](https://zensical.org/docs/authoring/admonitions/)
 
-!!! note
+??? note "Note"
 
     This is a **note** admonition. Use it to provide helpful information.
 
-!!! warning
+??? warning "Warning"
 
     This is a **warning** admonition. Be careful!
 
-### Details
+??? abstract "Abstract"
 
-> Go to [documentation](https://zensical.org/docs/authoring/admonitions/#collapsible-blocks)
+    This is a **Abstract** admonition. Give you main information.
 
-??? info "Click to expand for more info"
-    
-    This content is hidden until you click to expand it.
-    Great for FAQs or long explanations.
+!!! info "Info"
+    这是信息提示块
 
-## Code Blocks
+!!! tip "Tip"
+    这是技巧提示块
+
+!!! success "Success"
+    这是成功提示块
+
+!!! failure "Failure"
+    这是失败提示块
+
+!!! question "Question"
+    这是疑问提示块
+
+!!! danger "Danger"
+    这是危险提示块
+
+!!! bug "Bug"
+    这是Bug提示块
+
+!!! example "Example"
+    这是示例块
+
+!!! quote "Quote"
+    这是引用块
+
+## 代码块
 
 > Go to [documentation](https://zensical.org/docs/authoring/code-blocks/)
 
