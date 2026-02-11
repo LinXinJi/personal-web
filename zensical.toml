@@ -73,27 +73,6 @@ custom_dir = "overrides"                 # 自定义目录，用于覆盖默认�
 # font.text = "Inter"
 # font.code = "JetBrains Mono"
 
-# 浅色模式方案
-#
-[[project.theme.palette]]
-media = "(prefers-color-scheme: light)"  # 每个色彩方案都可以通过媒体查询与用户的浅色或深色外观系统偏好设置关联
-scheme = "default"
-accent = "indigo"                        # 强调色：用于标识可交互元素，例如悬停链接、按钮和滚动条。
-primary = "indigo"                       # 主色调：用于文本链接，在 classic 主题中还用于页眉和侧边栏。
-toggle.icon = "lucide/sun"
-toggle.name = "Switch to dark mode"
-
-# 深色模式方案
-#
-[[project.theme.palette]]
-media = "(prefers-color-scheme: dark)"
-scheme = "slate"
-accent = "indigo"                        
-primary = "indigo"                       
-toggle.icon = "lucide/moon"
-toggle.name = "Switch to light mode"
-
-
 # 主题功能
 #
 features = [
@@ -122,6 +101,27 @@ features = [
     "content.code.annotate",              # 代码块注释：用户可以在代码块中添加注释，这对于解释代码或提供上下文信息非常有用。
     "announce.dismiss",                   # 关闭公告：用户可以点击公告栏上的关闭按钮，将其隐藏起来。
 ]
+
+# 浅色模式方案
+#
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"  # 每个色彩方案都可以通过媒体查询与用户的浅色或深色外观系统偏好设置关联
+scheme = "default"
+accent = "indigo"                        # 强调色：用于标识可交互元素，例如悬停链接、按钮和滚动条。
+primary = "indigo"                       # 主色调：用于文本链接，在 classic 主题中还用于页眉和侧边栏。
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+# 深色模式方案
+#
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+accent = "indigo"                        
+primary = "indigo"                       
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+
 
 # 图标
 # 
@@ -174,7 +174,6 @@ quote = "fontawesome/solid/quote-left"
 #
 [project.markdown_extensions.admonition]
 [project.markdown_extensions.pymdownx.details]
-[project.markdown_extensions.pymdownx.superfences]
 
 # 代码块
 #
@@ -184,7 +183,6 @@ line_spans = "__span"
 pygments_lang_class = true
 [project.markdown_extensions.pymdownx.inlinehilite]
 [project.markdown_extensions.pymdownx.snippets]
-# [project.markdown_extensions.pymdownx.superfences]
 
 # 属性列表
 # 允许您为 Markdown 元素添加自定义属性，这在某些情况下非常有用，例如为代码块添加行号或为图像添加自定义宽度。
@@ -193,7 +191,6 @@ pygments_lang_class = true
 
 # 内容选项卡
 #
-# [project.markdown_extensions.pymdownx.superfences]
 [project.markdown_extensions.pymdownx.tabbed]
 alternate_style = true
 
@@ -210,18 +207,14 @@ alternate_style = true
 
 # 卡片网格
 #
-# [project.markdown_extensions.attr_list]
 [project.markdown_extensions.md_in_html]
 
 # 图表与emoji
 #
-# [project.markdown_extensions.attr_list]
 [project.markdown_extensions.pymdownx.emoji]
 
 # 图片
 #
-# [project.markdown_extensions.attr_list]
-# [project.markdown_extensions.md_in_html]
 [project.markdown_extensions.pymdownx.blocks.caption]
 
 # 列表
@@ -235,6 +228,12 @@ custom_checkbox = true
 [project.markdown_extensions.pymdownx.arithmatex]
 generic = true
 
+# mermaid 图表
+#
+[project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+    { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
+]
 
 # 即时预览
 # 推荐使用 Zensical 内置的 Markdown 扩展来处理即时预览功能，因为它允许您为文档的每个页面或每个部分启用即时预览
