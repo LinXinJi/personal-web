@@ -35,7 +35,19 @@ nav = [
     ] },
     { "项目" = [
         "projects/index.md",
-        { "项目1" = "projects/project1.md" }
+        { "项目1" = "projects/project1.md" },
+    ] },
+    { "Zensical" = [
+        "zensical/index.md",
+        { "内容" = "zensical/内容.md" },
+        { "提示框" = "zensical/提示框.md" },
+        { "按钮" = "zensical/按钮.md" },
+        { "代码" = "zensical/代码.md" },
+        { "内容选项卡" = "zensical/内容选项卡.md" },
+        { "列表" = "zensical/列表.md" },
+        { "网格" = "zensical/网格.md" },
+        { "注脚" = "zensical/注脚.md" },
+        { "图片" = "zensical/图片.md" },
     ] },
     { "联系" = "contact.md" },
     { "关于" = "about.md" },
@@ -170,6 +182,11 @@ quote = "fontawesome/solid/quote-left"
 #
 [project.markdown_extensions.abbr]
 
+# 属性列表
+# 允许您为 Markdown 元素添加自定义属性，这在某些情况下非常有用，例如为代码块添加行号或为图像添加自定义宽度。
+#
+[project.markdown_extensions.attr_list]
+
 # 提示框
 #
 [project.markdown_extensions.admonition]
@@ -178,21 +195,21 @@ quote = "fontawesome/solid/quote-left"
 # 代码块
 #
 [project.markdown_extensions.pymdownx.highlight]
-anchor_linenums = true
-line_spans = "__span"
-pygments_lang_class = true
+auto_title = true            # 自动为代码块添加标题
+linenums = true              # 为代码块添加行号
+anchor_linenums = true       # 为代码块添加行号锚点
+line_spans = "__span"        # 行号锚点的类名
+pygments_lang_class = true   
 [project.markdown_extensions.pymdownx.inlinehilite]
 [project.markdown_extensions.pymdownx.snippets]
-
-# 属性列表
-# 允许您为 Markdown 元素添加自定义属性，这在某些情况下非常有用，例如为代码块添加行号或为图像添加自定义宽度。
-#
-[project.markdown_extensions.attr_list]
 
 # 内容选项卡
 #
 [project.markdown_extensions.pymdownx.tabbed]
-alternate_style = true
+alternate_style = true  
+[project.markdown_extensions.pymdownx.tabbed.slugify]
+object = "pymdownx.slugs.slugify"
+kwds = { case = "lower" }
 
 # 注脚
 #
@@ -212,6 +229,8 @@ alternate_style = true
 # 图表与emoji
 #
 [project.markdown_extensions.pymdownx.emoji]
+emoji_index = "zensical.extensions.emoji.twemoji" 
+emoji_generator = "zensical.extensions.emoji.to_svg"
 
 # 图片
 #
